@@ -1,35 +1,96 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [color, setColor] = useState("black");
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div
+      className="w-full h-screen duration-200"
+      style={{ backgroundColor: color }}
+    >
+      <div className="fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2">
+        <div className="flex flex-wrap justify-center gap-7 shadow-lg bg-white px-3 py-2 rounded-xl border border-black">
+          <button
+            className="text-black outline-none px-4 py-1 rounded-full shadow-lg border border-black"
+            style={{ backgroundColor: "red" }}
+            onClick={() => setColor("red")}
+          >
+            RED
+          </button>
+          <button
+            className="text-black outline-none px-4 py-1 rounded-full shadow-lg border border-black"
+            style={{ backgroundColor: "green" }}
+            onClick={() => setColor("green")}
+          >
+            GREEN
+          </button>
+          <button
+            className="text-black outline-none px-4 py-1 rounded-full shadow-lg border border-black"
+            style={{ backgroundColor: "blue" }}
+            onClick={() => setColor("blue")}
+          >
+            BLUE
+          </button>
+          <button
+            className="text-black outline-none px-4 py-1 rounded-full shadow-lg border border-black"
+            style={{ backgroundColor: "olive" }}
+            onClick={() => setColor("olive")}
+          >
+            OLIVE
+          </button>
+          <button
+            className="text-black outline-none px-4 py-1 rounded-full shadow-lg border border-black"
+            style={{ backgroundColor: "grey" }}
+            onClick={() => setColor("grey")}
+          >
+            GREY
+          </button>
+          <button
+            className="text-black outline-none px-4 py-1 rounded-full shadow-lg border border-black"
+            style={{ backgroundColor: "yellow" }}
+            onClick={() => setColor("yellow")}
+          >
+            YELLOW
+          </button>
+          <button
+            className="text-black outline-none px-4 py-1 rounded-full shadow-lg border border-black"
+            style={{ backgroundColor: "pink" }}
+            onClick={() => setColor("pink")}
+          >
+            PINK
+          </button>
+          <button
+            className="text-black outline-none px-4 py-1 rounded-full shadow-lg border border-black"
+            style={{ backgroundColor: "purple" }}
+            onClick={() => setColor("purple")}
+          >
+            PURPLE
+          </button>
+          <button
+            className="text-black outline-none px-4 py-1 rounded-full shadow-lg border border-black"
+            style={{ backgroundColor: "lavender" }}
+            onClick={() => setColor("lavender")}
+          >
+            LAVENDER
+          </button>
+          <button
+            className="text-black outline-none px-4 py-1 rounded-full shadow-lg border border-black"
+            style={{ backgroundColor: "white" }}
+            onClick={() => setColor("white")}
+          >
+            WHITE
+          </button>
+          <button
+            className="text-white outline-none px-4 py-1 rounded-full shadow-lg border border-white"
+            style={{ backgroundColor: "black" }}
+            onClick={() => setColor("black")}
+          >
+            BLACK
+          </button>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
